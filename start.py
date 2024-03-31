@@ -40,7 +40,7 @@ def custom_domain_check():
             domain_sorgula(full_domain)
 
 def api_domain_check():
-    response = requests.get("https://apis.slowy.com.tr/domaintesterprogram/randomdomain.php")
+    response = requests.get("https://slowy.com.tr/domaintesterprogram/randomdomain.php")
     
     gelismis = input("Gelişmiş tarama yapmak ister misiniz? (evet/hayır): ")
 
@@ -50,7 +50,7 @@ def api_domain_check():
             for uzanti in uzantilar:
                 full_domain = response.text + uzanti
                 domain_sorgula(full_domain)
-            response = requests.get("https://apis.slowy.com.tr/domaintesterprogram/randomdomain.php")
+            response = requests.get("https://slowy.com.tr/domaintesterprogram/randomdomain.php")
     else:
         full_domain = response.text + '.com'
         domain_sorgula(full_domain)
